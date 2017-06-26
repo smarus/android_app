@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aizhan.product.adapter.CustomPagerAdapter;
+import com.example.aizhan.product.adapter.PageTransformer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new CustomPagerAdapter(this,new ModelObject(mResId)));
+        viewPager.setPageTransformer(true,new PageTransformer());
         gavnoKodOtAijan();
 
 
