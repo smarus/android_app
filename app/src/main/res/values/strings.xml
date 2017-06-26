@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ooba.kg</string>
+    <string name="tittle_articul">Артикул</string>
+    <string name="tittle_ostatok">Осталось</string>
+    <string name="tittle_scena">Цена</string>
+    <string name="articul"></string>
+    <string name="ostatok"></string>
+    <string name="scena"></string>
+    <string name="kolichestvo">Штук</string>
+    <string name="S">S</string>
+    <string name="M">M</string>
+    <string name="L">L</string>
+    <string name="XL">XL</string>
+    <string name="XXL">XXL</string>
+    <string name="XXXL">XXXL</string>
+    <string name="XXXXL">XXXXL</string>
+    <string name="XXXXXL">XXXXXL</string>
+    <string name="title_activity_image">activity_image</string>
+</resources>
