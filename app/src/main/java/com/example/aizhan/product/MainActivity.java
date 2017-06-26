@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new CustomPagerAdapter(this,new ModelObject(mResId)));
+        viewPager.setAdapter(new CustomPagerAdapter(this,new ModelObject(mResId),true));
         viewPager.setPageTransformer(true,new PageTransformer());
         gavnoKodOtAijan();
 

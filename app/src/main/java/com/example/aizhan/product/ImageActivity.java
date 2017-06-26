@@ -22,7 +22,7 @@ public class ImageActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.inner_view_pager);
         int resId = getIntent().getIntExtra("resId",R.drawable.abc);
         //Glide.with(this).load(resId).into(choosenImage);
-        viewPager.setAdapter(new CustomPagerAdapter(this,new ModelObject(mResId)));
+        viewPager.setAdapter(new CustomPagerAdapter(this,new ModelObject(mResId),false));
         viewPager.setPageTransformer(true,new PageTransformer());
 
     }

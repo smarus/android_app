@@ -19,10 +19,12 @@ public class CustomPagerAdapter extends PagerAdapter {
     private ModelObject dataObjectList;
     private LayoutInflater layoutInflater;
     private ImageView displayImage;
-    public CustomPagerAdapter(Context context, ModelObject dataObjectList){
+    private Boolean mainPage;
+    public CustomPagerAdapter(Context context, ModelObject dataObjectList,Boolean mainPage){
         this.context = context;
         this.layoutInflater = (LayoutInflater)this.context.getSystemService(this.context.LAYOUT_INFLATER_SERVICE);
         this.dataObjectList = dataObjectList;
+        this.mainPage = mainPage;
     }
     @Override
     public int getCount() {
@@ -39,10 +41,12 @@ public class CustomPagerAdapter extends PagerAdapter {
         displayImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ImageActivity.class);
-                intent.putExtra("resId",dataObjectList.getResId()[position]);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                if (mainPage) {
+                    Intent intent = new Intent(context, ImageActivity.class);
+                    intent.putExtra("resId", dataObjectList.getResId()[position]);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
             }
         });
         Glide.with(context).load(dataObjectList.getResId()[position]).into(displayImage);
