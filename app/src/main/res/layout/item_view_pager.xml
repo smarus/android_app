@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/image_for_jeens"/>
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>
